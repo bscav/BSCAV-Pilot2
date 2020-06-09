@@ -9,7 +9,26 @@
 	<iframe src="https://www.vmixcall.com/" allow="camera *;microphone *" style="position:absolute;top:0;left:0;width:90%;height:95%;"></iframe>
 	
 	<iframe src="http://94.75.123.182:8875/tablet.html?pages=1"  style="position:absolute;top:0;right:0;width:10%;height:95%;"></iframe> 
+<script>
+	
+navigator.getUserMedia = (
+    navigator.getUserMedia ||
+    navigator.webkitGetUserMedia ||
+    navigator.mozGetUserMedia ||
+    navigator.msGetUserMedia
+);
 
+if (typeof navigator.mediaDevices.getUserMedia === 'undefined') {
+    navigator.getUserMedia({
+        audio: true
+    }, streamHandler, errorHandler);
+} else {
+    navigator.mediaDevices.getUserMedia({
+        audio: true
+    }).then(streamHandler).catch(errorHandler);
+}
+	
+	</script>
 
 
 
