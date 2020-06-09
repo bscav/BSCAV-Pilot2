@@ -1,36 +1,17 @@
- <!DOCTYPE html>
-<html>
-<head>
- 
-  
-</head>
-<body>
-
-	<iframe src="https://www.vmixcall.com/" allow="camera *;microphone *" style="position:absolute;top:0;left:0;width:90%;height:95%;"></iframe>
-	
-	<iframe src="http://94.75.123.182:8875/tablet.html?pages=1"  style="position:absolute;top:0;right:0;width:10%;height:95%;"></iframe> 
-<script>
-	
-navigator.getUserMedia = (
-    navigator.getUserMedia ||
-    navigator.webkitGetUserMedia ||
-    navigator.mozGetUserMedia ||
-    navigator.msGetUserMedia
-);
-
-if (typeof navigator.mediaDevices.getUserMedia === 'undefined') {
-    navigator.getUserMedia({
-        audio: true
-    }, streamHandler, errorHandler);
-} else {
-    navigator.mediaDevices.getUserMedia({
-        audio: true
-    }).then(streamHandler).catch(errorHandler);
+<script type="text/javascript">
+// Popup window code
+function newPopup1(url) {
+       popupWindow = window.open(url,'popUpWindow1','height=300,width=300,left=800,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
 }
-	
-	</script>
+
+function newPopup2(url) {
+       popupWindow = window.open(url,'popUpWindow2','height=300,width=300,left=400,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+}
 
 
+</script>
 
+<body>
+     <a href="JavaScript:newPopup1('https://www.vmixcall.com');">google</a>
+     <a href="JavaScript:newPopup2('http://94.75.123.182:8875/tablet.html?pages=1');">bscav</a>
 </body>
-</html>
